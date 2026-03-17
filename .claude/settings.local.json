@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --eslint --no-tailwind --no-src-dir --no-app --no-import-alias --yes)",
+      "Bash(npx create-next-app@latest _next_temp --typescript --eslint --no-tailwind --no-src-dir --no-app --no-import-alias --yes)",
+      "Bash(npx create-next-app@latest next-temp --typescript --eslint --no-tailwind --no-src-dir --no-app --no-import-alias --yes)",
+      "Bash(cp next-temp/public/* public/)",
+      "Bash(mv next-temp/pages next-temp/styles next-temp/next.config.ts next-temp/next-env.d.ts next-temp/tsconfig.json next-temp/eslint.config.mjs next-temp/package.json next-temp/package-lock.json next-temp/README.md .)",
+      "Bash(mv next-temp/node_modules .)",
+      "Bash(rm -rf next-temp)",
+      "Bash(npm install:*)",
+      "Bash(mkdir -p game/scenes game/entities public/assets/sprites/player public/assets/sprites/enemies public/assets/sprites/collectibles public/assets/sprites/background public/assets/sprites/ui public/assets/sounds lib components styles)",
+      "Bash(touch game/scenes/.gitkeep game/entities/.gitkeep public/assets/sprites/player/.gitkeep public/assets/sprites/enemies/.gitkeep public/assets/sprites/collectibles/.gitkeep public/assets/sprites/background/.gitkeep public/assets/sprites/ui/.gitkeep public/assets/sounds/.gitkeep lib/.gitkeep components/.gitkeep styles/.gitkeep)",
+      "Bash(mv gladiator-sprite.png assets/sprites/player/gladiator-sprite.png)",
+      "Bash(mv bear-enemy-sprite.png assets/sprites/enemies/bear-enemy-sprite.png)",
+      "Bash(mv fomo-ghost-sprite.png assets/sprites/enemies/fomo-ghost-sprite.png)",
+      "Bash(mv margin-thief-sprite.png assets/sprites/enemies/margin-thief-sprite.png)",
+      "Bash(mv minotaur-boss-sprite.png assets/sprites/enemies/minotaur-boss-sprite.png)",
+      "Bash(npm run:*)",
+      "Bash(taskkill /PID 5796 /F)",
+      "Bash(cmd /c \"taskkill /PID 5796 /F\")",
+      "Bash(cmd /c \"taskkill /IM node.exe /F\")",
+      "Bash(cmd /c \"netstat -ano | findstr :3000\")",
+      "Bash(cmd /c \"taskkill /IM node.exe /F 2>nul & echo done\")",
+      "Bash(cmd /c \"taskkill /IM node.exe /F 2>nul & echo killed\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3002/game)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3002/)",
+      "Bash(node -e \"const fs=require\\(''fs''\\),path=require\\(''path''\\);function walk\\(d\\){fs.readdirSync\\(d\\).forEach\\(f=>{const full=path.join\\(d,f\\);if\\(fs.statSync\\(full\\).isDirectory\\(\\)\\)walk\\(full\\);else if\\(f.endsWith\\(''.png''\\)\\){const b=fs.readFileSync\\(full\\);console.log\\(f+'': ''+b.readUInt32BE\\(16\\)+''x''+b.readUInt32BE\\(20\\)\\);}}\\);}walk\\(''public/assets/sprites''\\);\")",
+      "Bash(node -e \":*)",
+      "Bash(node scripts/extract-sprites.js)",
+      "Bash(node remove-bg.js)",
+      "Bash(node -e \"console.log\\(require\\(''jimp/package.json''\\).version\\)\")"
+    ]
+  }
+}
